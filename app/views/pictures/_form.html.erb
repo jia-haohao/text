@@ -1,0 +1,38 @@
+<%= form_with(model: @picture, local: true, url: choose_new_or_edit) do |form| %>
+  <% if @picture.errors.any? %>
+    <div id = "error_explanation">
+     <h2><%= @picture.errors.count %>件のエラーがあります.</h2>
+     <ul>
+     <% @picture.errors.full_messages.each do |msg| %>
+       <li><%= msg %></li>
+     <% end %>
+     </ul>
+    </div>
+  <% end %>
+
+  <div class = "container">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+  <div class = "container">
+    <%= form.label :content %>
+    <%= form.email_field :content, class: "form-control" %>
+  </div>
+  <div class="container">
+    <%= form.label :image %><br />
+    <%= image_tag(@picture.image.url) if @picture.image && @picture.image.url %>
+    <%= form.file_field :image %>
+    <%= form.hidden_field :image_cache %>
+  </div>
+
+  <br><br>
+
+  <div class = "actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+<br>
+
+<div class = "container">
+  <%= link_to "一覧画面に戻る", pictures_path, class: "btn btn-danger" %>
+</div>
