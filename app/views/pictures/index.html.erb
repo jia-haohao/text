@@ -14,15 +14,15 @@
           <td><%= picture.content %></td>
           <td><%= picture.image %></td>
           <td><%= link_to '詳細', picture_path(picture.id), class: "btn btn-primary" %></td>
-          <td><%= link_to '編集', edit_path(picture.id), class: "btn btn-primary",
+          <td><%= link_to '編集', edit_picture_path(picture.id), class: "btn btn-primary",
             data: { confirm: '本当に編集していいですか' } %></td>
           <td><%= link_to '削除', picture_path(picture.id), class: "btn btn-primary",
-            method: :delete, data: { confirm: '本当に削除していいですか' } %></td></tr>
+            method: :delete, data: { confirm: '本当に削除していいですか' } %></td>
         </tr>
       <% end %>
       </table>
 
       <br>
 
-      <%= link_to '新しい画像を投稿', new_picture_path, class: "btn btn-secondary" %>
+      <%= link_to '新しい画像を投稿', new_picture_path, class: "btn btn-success" %>
    </div>

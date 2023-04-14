@@ -1,6 +1,6 @@
 <div class="row gx-4 gx-lg-5 justify-content-center">
    <div class="col-8">  
-      <h3 class = "display-4">以下の内容を送信する</h3>
+      <h3 class = "">以下の内容を送信する</h3>
 
       <%= form_with(model: @picture, url: pictures_path, local: true) do |form| %>
         <%= form.hidden_field :title %>
@@ -10,10 +10,11 @@
 
         <p>タイトル:<%= @picture.title %></p>
         <p>本文:<%= @picture.content %></p>
-        <%= form.submit "📤", class: "btn btn-secondary" %>
-        <%= form.submit "🔙", class: "btn btn-dark" %>
+       
+        <%= form.submit "送信", class: "btn btn-secondary" %>
+        <%= form.submit "戻る", class: "btn btn-dark" %>
       <% end %>
-
+      <br>
       <%= form_with(model:@picture, url:new_picture_path, local:true, method:"get") do |form| %>
         <%= form.hidden_field :image_cache %>
         <%= form.submit "戻る", name: "back" %>

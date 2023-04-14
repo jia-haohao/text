@@ -16,7 +16,7 @@
   </div>
   <div class = "container">
     <%= form.label :content %>
-    <%= form.email_field :content, class: "form-control" %>
+    <%= form.text_field :content, class: "form-control" %>
   </div>
   <div class="container">
     <%= form.label :image %><br />
@@ -25,9 +25,9 @@
     <%= form.hidden_field :image_cache %>
   </div>
 
-  <br><br>
+  <br>
 
-  <div class = "actions">
+  <div class = "container">
     <%= form.submit %>
   </div>
 <% end %>
