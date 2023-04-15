@@ -25,7 +25,7 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 gem 'carrierwave', '>= 3.0.0.beta', '< 4.0'
 gem 'mini_magick'
-
+# gem 'with_popup'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

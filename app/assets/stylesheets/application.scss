@@ -13,4 +13,17 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap";
+@import "bootstrap";
+
+@import "sample.css";
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  color: darkgray;
+  font-size: 28px;
+  background-color: bisque;
+  height: 100%;
+}

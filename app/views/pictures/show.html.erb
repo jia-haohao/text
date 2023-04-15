@@ -5,7 +5,7 @@
       <p>本文: <%= @picture.content %></p>
       <p>
         <strong>画像</strong>
-        <%= image_tag @picture.image.url %>
+        <%= image_tag @picture.image.url() %>
       </p>
 
       <%= link_to '編集', edit_picture_path(@picture), class: "btn btn-light" %> |
