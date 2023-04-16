@@ -1,4 +1,4 @@
-<h1>Log in</h1>
+<h1 class = "container">Log in</h1>
 <%= form_with(scope: :session, url: sessions_path, local: true) do |form| %>
   <div class = "container">
     <%= form.label :email %>
@@ -12,6 +12,6 @@
   <br>
 
   <div class = "container">
-    <%= submit_tag("Log in", {class: "btn btn-primary"}) %>
+    <%= form.submit "Log in", class: "btn btn-primary" %>
   </div>
 <% end %>

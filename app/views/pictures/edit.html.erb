@@ -1,10 +1,7 @@
-<div class="row gx-4 gx-lg-5 justify-content-center">
-   <div class="col-md-10 col-lg-8 col-xl-7">  
-      <h2 class = "display-4">編集する</h2>
+<h2 class = "container">編集する</h2>
 
-        <%= render 'form', picture: @picture %>
+<%= render 'form' %>
+<%# <%= render 'form', picture: @picture %> 
 
-        <%= link_to '詳細', @picture %>
-        <%= link_to '戻る', picture_path %>
-    </div>
-</div>
+<%= link_to '詳細', @picture %>
+<%= link_to '戻る', picture_path %>

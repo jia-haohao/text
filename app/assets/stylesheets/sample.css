@@ -18,40 +18,15 @@ body {
 h1 {
   color: cadetblue;
   margin: 25px 0px;
-  text-align: center;
 }
 
-.clearfix:after {
-  content: "";
-  display: block;
-  clear:both;
+th,
+td {
+  font-size: 20px;
+  color: darkorchid;
 }
 
 /* html {
   font-size: 62.5%;
   height: 100%;
 } */
-
-.menu {
-  width: 500px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
-.menu li{
-  padding: 20px;
-}
-
-li {
-  list-style: none;
-}
-
-.event {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.side, .danger, .notice {
-  text-align: center;
-}

@@ -1,14 +1,10 @@
-<div class="row gx-4 gx-lg-5 justify-content-center">
-   <div class="col-8">  
       <h1>詳細画像<h2>
       <p>タイトル: <%= @picture.title %></p>
       <p>本文: <%= @picture.content %></p>
       <p>
         <strong>画像</strong>
-        <%= image_tag @picture.image.url() %>
+        <%= image_tag @picture.image.url, style: 'width: 400px; height: 240px' if @picture.image_url %>
       </p>
 
-      <%= link_to '編集', edit_picture_path(@picture), class: "btn btn-light" %> |
+      <%= link_to '編集', edit_picture_path(@picture), class: "btn btn-light" %>
       <%= link_to '戻る', pictures_path, class: "btn btn-danger" %>
-   </div>
-</div>
