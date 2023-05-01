@@ -16,9 +16,10 @@
 @import "bootstrap";
 
 @import "sample.css";
+
 html {
   font-size: 20px;
-  height: 100%;
+  min-height: 100%;
 }
 
 body {

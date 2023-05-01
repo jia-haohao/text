@@ -18,14 +18,14 @@
     <%= form.label :content %>
     <%= form.text_field :content, class: "form-control" %>
   </div>
+  <br>
   <div class="image_field">
     <%= form.label :image %>
     <%= image_tag(@picture.image.url, style: 'width: 200px; height: 180px;') if @picture.image && @picture.image.url %>
     <%= form.file_field :image %>
+    <%= form.hidden_field :image_cache %>
   </div>
-
   <br>
-
   <div class = "container">
     <%= form.submit %>
   </div>
